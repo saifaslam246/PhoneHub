@@ -59,8 +59,8 @@ const AddUserForm = () => {
     formData.append("date", values.date);
     formData.append("time", values.time);
     try {
-      await axios.post("http://localhost:4000/api/v1/appoinment/new", formData);
-      axios.post("http://localhost:4000/api/v1/email", formData);
+      await axios.post("/api/v1/appoinment/new", formData);
+      axios.post("/api/v1/email", formData);
 
       if (isAuthanticated) {
         navigate("/dashboard");

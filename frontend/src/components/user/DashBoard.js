@@ -54,9 +54,7 @@ export default function AcccessibleTable() {
   const deleteAppointment = async (bookId) => {
     try {
       toast.success("delete ");
-      await axios.delete(
-        `http://localhost:4000/api/v1/delete-appointment/${bookId}`
-      );
+      await axios.delete(`/api/v1/delete-appointment/${bookId}`);
     } catch (err) {
       console.log(err.response);
     }
@@ -65,9 +63,7 @@ export default function AcccessibleTable() {
   useEffect(() => {
     const getAppointment = async () => {
       try {
-        const appointmentResponse = await axios.get(
-          "http://localhost:4000/api/v1/appoinments"
-        );
+        const appointmentResponse = await axios.get("/api/v1/appoinments");
         setAppointmentData(appointmentResponse.data.data);
       } catch (error) {}
     };
