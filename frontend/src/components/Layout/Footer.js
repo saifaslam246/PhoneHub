@@ -7,7 +7,10 @@ import Button from "@mui/material/Button";
 import { HashLink as Link } from "react-router-hash-link";
 import SendIcon from "@mui/icons-material/Send";
 import PhoneIcon from "@mui/icons-material/Phone";
+import HomeIcon from "@mui/icons-material/Home";
 import MailIcon from "@mui/icons-material/Mail";
+import AccessTimeIcon from "@mui/icons-material/AccessTime";
+import PlaceIcon from "@mui/icons-material/Place";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import GoogleIcon from "@mui/icons-material/Google";
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -228,6 +231,42 @@ export default function BasicGrid() {
                   marginTop: 3,
                 }}
               >
+                <HomeIcon />
+              </Item>
+              <Item
+                style={{
+                  textDecoration: "none",
+                  color: "#785b5b",
+                  fontSize: 20,
+                }}
+              >
+                Phone Hub Bishop Auckland
+              </Item>
+            </Stack>
+            <Stack direction="row" spacing={2}>
+              <Item
+                style={{
+                  marginTop: 3,
+                }}
+              >
+                <PlaceIcon />
+              </Item>
+              <Item
+                style={{
+                  textDecoration: "none",
+                  color: "#785b5b",
+                  fontSize: 20,
+                }}
+              >
+                93 newgate street bishop auckland DL14 7EW
+              </Item>
+            </Stack>
+            <Stack direction="row" spacing={2}>
+              <Item
+                style={{
+                  marginTop: 3,
+                }}
+              >
                 <PhoneIcon />
               </Item>
               <Item
@@ -256,6 +295,24 @@ export default function BasicGrid() {
                 }}
               >
                 phonehubbishop@gmail.com
+              </Item>
+            </Stack>
+            <Stack direction="row" spacing={2}>
+              <Item
+                style={{
+                  marginTop: 3,
+                }}
+              >
+                <AccessTimeIcon />
+              </Item>
+              <Item
+                style={{
+                  textDecoration: "none",
+                  color: "#785b5b",
+                  fontSize: 17,
+                }}
+              >
+                Monday - Saturday : 10:00AM - 4:30PM
               </Item>
             </Stack>
             <Stack

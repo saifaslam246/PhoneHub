@@ -64,7 +64,6 @@ const DrawerHeader = styled("div")(({ theme }) => ({
   display: "flex",
   alignItems: "center",
   padding: theme.spacing(0, 1),
-  // necessary for content to be below app bar
   ...theme.mixins.toolbar,
   justifyContent: "flex-end",
 }));
@@ -117,7 +116,6 @@ export default function PersistentDrawerLeft() {
   const handleClose = () => {
     setAnchorEl(null);
   };
-  // const pages = ["Services", "Gallery", "About Us", "Products", "Amenities"];
   const handleDrawerOpen = () => {
     setOpen(true);
   };
@@ -146,7 +144,6 @@ export default function PersistentDrawerLeft() {
           >
             <MenuIcon />
           </IconButtonWrapper>
-          {/* {pages.map((page) => ( */}
           <MenuItemWrapper>
             <Typography textAlign="center">
               <Link
@@ -202,7 +199,6 @@ export default function PersistentDrawerLeft() {
               </Link>
             </Typography>
           </MenuItemWrapper>
-          {/* // ))} */}
           <ButtonWrapper
             id="demo-positioned-button"
             aria-controls={open1 ? "demo-positioned-menu" : undefined}
@@ -211,7 +207,7 @@ export default function PersistentDrawerLeft() {
             onClick={handleClick}
           >
             <IconButton>
-              <Avatar alt="Remy Sharp" src="/images/avatar.png" />
+              <Avatar alt="Remy Sharp" src="/images/logo.jpeg" />
             </IconButton>
           </ButtonWrapper>
           <Menu

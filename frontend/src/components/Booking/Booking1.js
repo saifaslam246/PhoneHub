@@ -38,12 +38,10 @@ const AddUserForm = () => {
     "10:00 AM",
     "11:00 AM",
     "12:00 AM",
-    "13:00 AM",
-    "14:00 AM",
-    "15:00 AM",
-    "16:00 AM",
-    "17:00 AM",
-    "18:00 AM",
+    "13:00 PM",
+    "14:00 PM",
+    "15:00 PM",
+    "16:00 PM",
   ];
 
   const handleAddUser = async (
@@ -86,7 +84,7 @@ const AddUserForm = () => {
           email: "",
           number: "",
           issue: "Charging port",
-          time: "14:00 AM",
+          time: "10:00 AM",
           date: "",
         }}
         validationSchema={Yup.object().shape({
