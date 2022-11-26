@@ -13,7 +13,6 @@ import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import PlaceIcon from "@mui/icons-material/Place";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import GoogleIcon from "@mui/icons-material/Google";
-import InstagramIcon from "@mui/icons-material/Instagram";
 const ariaLabel = { "aria-label": "description" };
 const Item = styled(Grid)(
   ({ theme, marginLeft, marginRight, backgroundColor }) => ({
@@ -315,35 +314,6 @@ export default function BasicGrid() {
                 Monday - Saturday : 10:00AM - 4:30PM
               </Item>
             </Stack>
-            <Stack
-              direction="row"
-              spacing={2}
-              style={{
-                marginLeft: 50,
-              }}
-            >
-              <a
-                href="https://m.facebook.com/phonehubbishop/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <FacebookIcon />
-              </a>
-              <a
-                href="https://m.facebook.com/phonehubbishop/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <InstagramIcon />
-              </a>
-              <a
-                href="https://mail.google.com/mail/u/0/#inbox?compose=new"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <GoogleIcon />
-              </a>
-            </Stack>
           </Stack>
         </Grid>
       </GridWrapper>
@@ -356,6 +326,29 @@ export default function BasicGrid() {
         <Item>
           2022 @ http://saif-portfolio-io.herokuapp.com | All Right Reserved
         </Item>
+        <Stack
+          direction="row"
+          spacing={2}
+          style={{
+            marginLeft: 50,
+          }}
+        >
+          <a
+            href="https://m.facebook.com/phonehubbishop/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FacebookIcon />
+          </a>
+
+          <a
+            href="https://mail.google.com/mail/u/0/#inbox?compose=new"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <GoogleIcon />
+          </a>
+        </Stack>
       </StackWrapper>
     </Box>
   );
