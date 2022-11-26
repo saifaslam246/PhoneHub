@@ -22,10 +22,29 @@ const Item = styled(Grid)(
   })
 );
 const GridWrapper = styled(Grid)(({ theme, bordercolor, hovercolor }) => ({
+  marginLeft: "40px",
+  marginRight: "40px",
+  [theme.breakpoints.down(1025)]: {
+    marginLeft: "0px",
+    marginRight: "0px",
+  },
+}));
+
+const GridWrapper1 = styled(Grid)(({ theme, bordercolor, hovercolor }) => ({
   [theme.breakpoints.down(1025)]: {
     display: "none",
   },
 }));
+
+const LastGridWrapper = styled(Grid)(({ theme, bordercolor, hovercolor }) => ({
+  fontSize: "10px",
+  backgroundColor: "red",
+  width: "500px",
+  [theme.breakpoints.down(1025)]: {
+    // display: "none",
+  },
+}));
+
 const DividerWrapper = styled(Divider)(
   ({ theme, bordercolor, hovercolor }) => ({
     marginTop: "20px",
@@ -60,8 +79,8 @@ export default function BasicGrid() {
       sx={{ flexGrow: 1 }}
       style={{ backgroundColor: "#DFDFDF", marginRight: 40, marginLeft: 40 }}
     >
-      <GridWrapper container spacing={2} marginLeft="40px" marginRight="40px">
-        <Grid item xs={3} style={{ marginLeft: 10 }}>
+      <GridWrapper container spacing={2}>
+        <GridWrapper1 item xs={3}>
           <Stack spacing={2}>
             <Item>
               <img
@@ -90,8 +109,8 @@ export default function BasicGrid() {
               </Button>
             </Item>
           </Stack>
-        </Grid>
-        <Grid item xs={2}>
+        </GridWrapper1>
+        <GridWrapper1 item xs={2}>
           <Stack spacing={2}>
             <Item>
               <Typography style={{ marginBottom: 5 }} variant="h5">
@@ -135,9 +154,9 @@ export default function BasicGrid() {
               Contact Us
             </Link>
           </Stack>
-        </Grid>
+        </GridWrapper1>
 
-        <Grid item xs={3}>
+        <GridWrapper1 item xs={3}>
           <Stack spacing={2}>
             <Item>
               <Typography style={{ marginBottom: 5 }} variant="h5">
@@ -216,8 +235,8 @@ export default function BasicGrid() {
               Water Damage
             </Item>
           </Stack>
-        </Grid>
-        <Grid item xs={3}>
+        </GridWrapper1>
+        <LastGridWrapper item xs={3}>
           <Stack spacing={2}>
             <Item>
               <Typography style={{ marginBottom: 5 }} variant="h5">
@@ -315,7 +334,7 @@ export default function BasicGrid() {
               </Item>
             </Stack>
           </Stack>
-        </Grid>
+        </LastGridWrapper>
       </GridWrapper>
       <DividerWrapper />
       <StackWrapper
