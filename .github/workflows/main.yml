@@ -1,0 +1,20 @@
+name: Slack Notification
+on:
+  push:
+    branches: [ development ]
+  pull_request:
+    branches: [ development ]
+  workflow_dispatch:
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    env:
+      SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+    steps:
+    - name: Slack Notification
+      uses: act10ns/slack@v1
+      with:
+        status: starting
+        channel: '#equipx-fe-notification'
+        message: Starting Deployment...
+      if: always()
